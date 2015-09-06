@@ -4,10 +4,13 @@
 \alias{gcv}
 \title{Geometric Coefficient of Variation}
 \usage{
-gcv(x)
+gcv(x, as_pct = FALSE)
 }
 \arguments{
 \item{x}{a numeric vector}
+
+\item{as_pct}{logical stating whether the result should be expressed as a
+percentage}
 }
 \description{
 This function calculates the geometric coefficient of variation (GCV) of
@@ -15,5 +18,6 @@ a numeric vector.
 }
 \examples{
 gcv(c(19, 17, 18))
+gcv(17:19, as_pct = TRUE)
 }
 
