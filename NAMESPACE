@@ -2,4 +2,6 @@
 
 export(gcv)
 export(geomean)
+export(plot_fn)
 export(rsd)
+export(theme_galangjs)
