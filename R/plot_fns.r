@@ -19,20 +19,14 @@ plot_fn <- function(f, start, end, res = 250, ...) {
 
 #' Joel's ggplot Theme
 #'
-#' A ggplot plot theme based on \code{theme_bw} that uses the Candara font and
-#' a solarized light background.
+#' A ggplot plot theme adds the the Candara font to \code{theme_solarize} from
+#' the \code{ggthemes} package.
 #' @export
 #' @examples
 #' plot_fn(sin, -pi, pi) + theme_galangjs()
 theme_galangjs <- function() {
-  require(extrafont)
-  if (!grep('Candara', fonts())) ttr_import(pattern = 'Candara')
-  # solarized light background
-  # (http://www.zovirl.com/2011/07/22/solarized_cheat_sheet/)
-  solar_bg <- rgb(253,  246,  227, maxColorValue = 255)
-  theme_bw() +
-    theme(text = element_text(family = 'Candara'),
-          rect = element_rect(fill = solar_bg),
-          panel.background = element_rect(fill = solar_bg),
-          panel.grid.minor = element_line(color = 'gray90', size = 0.2))
+  if (!grep('Candara', extrafont::fonts())) {
+    extrafont::ttr_import(pattern = 'Candara')
+  }
+  ggthemes::theme_solarized(base_family = "Candara")
 }

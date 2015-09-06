@@ -7,8 +7,8 @@
 theme_galangjs()
 }
 \description{
-A ggplot plot theme based on \code{theme_bw} that uses the Candara font and
-a solarized light background.
+A ggplot plot theme adds the the Candara font to \code{theme_solarize} from
+the \code{ggthemes} package.
 }
 \examples{
 plot_fn(sin, -pi, pi) + theme_galangjs()
