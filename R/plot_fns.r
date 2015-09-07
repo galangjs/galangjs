@@ -11,7 +11,7 @@
 #' plot_fn(sin, -pi, pi)
 #' plot_fn(dgamma, 0, 5, shape = 1.1, rate = 2)
 plot_fn <- function(f, start, end, res = 250, ...) {
-  require(ggplot2)
+#  require(ggplot2)
   x <- seq(start, end, length = res)
   y <- f(x, ...)
   ggplot(data.frame(x, y), aes(x, y)) + geom_line()

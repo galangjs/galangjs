@@ -3,6 +3,7 @@ Title: Utility Functions for Joel Galang
 Version: 0.0.0.9000
 Authors@R: person("Joel", "Galang", , "galangjs628t@gmail.com", role = c("aut", "cre"))
 Description: This package contains functions that Joel Galang grew tired of copying/recreating.
-Depends: R (>= 3.1.2)
+Depends: R (>= 3.1.2), ggplot2 (>= 1.0.0)
+Imports: extrafont, ggthemes
 License: GPL
 LazyData: true
